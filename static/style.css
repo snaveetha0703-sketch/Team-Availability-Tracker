@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f4fa;
+    color: #263248;
+}
+
+header {
+    background: #263b63;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.summary-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #0001;
+}
+
+.summary-card h2 {
+    font-size: 30px;
+    margin: 5px;
+}
+
+.summary-card p {
+    color: #68758a;
+}
+
+.available h2 {
+    color: #15945b;
+}
+
+.busy h2 {
+    color: #dc4545;
+}
+
+.away h2 {
+    color: #d18b16;
+}
+
+.add-section,
+.team-section {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #0001;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccd3df;
+    border-radius: 7px;
+}
+
+button {
+    background: #38588d;
+    color: white;
+    border: none;
+    padding: 11px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #243c65;
+}
+
+.member-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 17px;
+    border-bottom: 1px solid #e5e8ef;
+}
+
+.member-name {
+    font-weight: bold;
+}
+
+.member-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+select {
+    padding: 9px;
+    border-radius: 7px;
+    border: 1px solid #ccd3df;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status.Available {
+    background: #d9f5e6;
+    color: #137d48;
+}
+
+.status.Busy {
+    background: #ffe0e0;
+    color: #c22d2d;
+}
+
+.status.Away {
+    background: #fff0d1;
+    color: #a66b00;
+}
+
+.delete-btn {
+    background: #d94b4b;
+}
+
+.delete-btn:hover {
+    background: #b72e2e;
+}
+
+.refresh-note {
+    text-align: center;
+    color: #8290a5;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+#message {
+    color: #16834e;
+}
+
+@media (max-width: 650px) {
+    .summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .member-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .member-actions {
+        flex-wrap: wrap;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form button {
+        width: 100%;
+    }
+}

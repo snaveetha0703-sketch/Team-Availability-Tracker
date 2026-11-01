@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team Availability Tracker</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Team Availability Tracker</h1>
+        <p>Manage your team's availability in one place</p>
+    </header>
+
+    <main>
+
+        <section class="summary">
+
+            <div class="summary-card">
+                <h2 id="total">0</h2>
+                <p>Total Members</p>
+            </div>
+
+            <div class="summary-card available">
+                <h2 id="available">0</h2>
+                <p>Available</p>
+            </div>
+
+            <div class="summary-card busy">
+                <h2 id="busy">0</h2>
+                <p>Busy</p>
+            </div>
+
+            <div class="summary-card away">
+                <h2 id="away">0</h2>
+                <p>Away</p>
+            </div>
+
+        </section>
+
+
+        <section class="add-section">
+
+            <h2>Add Team Member</h2>
+
+            <form id="memberForm">
+                <input
+                    type="text"
+                    id="memberName"
+                    placeholder="Enter member name"
+                    required
+                >
+
+                <button type="submit">Add Member</button>
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+
+        <section class="team-section">
+
+            <h2>Team Members</h2>
+
+            <div id="memberList">
+                Loading members...
+            </div>
+
+            <p class="refresh-note">
+                Dashboard refreshes automatically every 3 seconds.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
